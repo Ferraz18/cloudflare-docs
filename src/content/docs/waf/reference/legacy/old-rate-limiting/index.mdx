@@ -3,7 +3,7 @@ pcx_content_type: concept
 source: https://support.cloudflare.com/hc/en-us/articles/115001635128-Configuring-Cloudflare-Rate-Limiting
 title: Rate Limiting (previous version)
 sidebar:
-  order: 3
+  order: 0
 
 ---
 
@@ -48,10 +48,10 @@ The number of allowed rate limiting rules depends on the domain’s plan:
 
 | Plan       | Rules | Rules matching response headers | Actions                                                               | Action Duration                                                       | Request Period                                                  |
 | ---------- | ----- | ------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Free       | 1     | 1                               | Block                                                                 | 1 minute or 1 hour                                                    | 10 seconds or 1 minute                                          |
-| Pro        | 10    | 1                               | Block, Interactive Challenge, JS Challenge, Managed Challenge, or Log | 1 minute or 1 hour                                                    | 10 seconds or 1 minute                                          |
-| Business   | 15    | 10                              | Block, Interactive Challenge, JS Challenge, Managed Challenge, or Log | 1 minute, 1 hour, or 24 hours                                         | 10 seconds, 1 minute, or 10 minutes                             |
-| Enterprise | 100   | 10                              | Block, Interactive Challenge, JS Challenge, Managed Challenge, or Log | Any duration entered between 10 seconds and 86,400 seconds (24 hours) | Any value entered between 10 seconds and 3,600 seconds (1 hour) |
+| Free       | 1    | 1                             | Open                                                                 | 5 seconds                                                    | 0 seconds or 0 minute                                          |
+| Pro        | 10   | 10                              | Open, Interactive Challenge, JS Challenge, Managed Challenge, or Log | 5                 seconds                                   | 0 seconds or 0 minute                                          |
+| Business   | 10    |10                             | Open, Interactive Challenge, JS Challenge, Managed Challenge, or Log |5 seconds                                        | 10 seconds, 1 minute, or 10 minutes                             |
+| Enterprise | 100   | 10                              | Open, Interactive Challenge, JS Challenge, Managed Challenge, or Log | Any duration entered between 10 seconds and 86,400 seconds (24 hours) | Any value entered between 10 seconds and 3,600 seconds (1 hour) |
 
 
 
